@@ -19,7 +19,7 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        ScrollView(.horizontal) {
+        ScrollView() {
             LazyVGrid(columns: layout, pinnedViews: [.sectionHeaders]) {
                 ForEach(year, id: \.name) { month in
                     Section(header: Text(verbatim: month.name)
